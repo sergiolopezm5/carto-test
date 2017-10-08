@@ -1,0 +1,163 @@
+body {
+    background-color: #F9F9F9;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+header {
+    margin: 0;
+    height: 67px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+li {
+    display: inline;
+}
+h1 {
+    text-transform: uppercase;
+    color: #162745;
+}
+h2 {
+    margin: 0;
+}
+h5 {
+    margin: 0;
+    width: 150px;
+}
+a {
+    text-decoration: none;
+    color: #1785FB;
+    font-size: 15px;
+}
+.first-section {
+    padding-top: 80px;
+}
+.second-section {
+    padding-top: 64px;
+}
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    height: 100%;
+}
+.documentation {
+    max-width: 780px;
+}
+.documentation h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+.documentation p {
+    font-size: 20px;
+    color: #162745;
+}
+.menu {
+    height: 100%;
+    font-size: 13px;
+    color: #162745;
+}
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
+}
+.menu li:first-child {
+    margin-left: 0;
+}
+.menu li {
+    margin-left: 40px;
+}
+.docs {
+    height: 67px;
+    border-bottom: 1px solid #eeeeee;
+    color: #d8d8d8;
+    font-style: normal;
+    font-size: 13px;
+}
+.docs li:first-child {
+    margin-left: 0;
+    color: #162745;
+}
+.docs li {
+    margin-left: 40px;
+}
+.second-section li{
+    width: calc(100%/3);
+}
+.box {
+    height: 56px;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px #dddddd;
+    align-items: center;
+}
+.box img {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.box h5 {
+    color: #162945;
+    font-size: 15px;
+}
+.card h2 {
+    color: #647083;
+    font-size: 18px;
+}
+.card p {
+    color: #647083;
+    font-size: 15px;
+}
+.second-section li:first-child {
+    margin-left: 0;
+}
+.second-section li {
+    margin-left: 20px;
+}
+.api {
+    background-color: #dddddd;
+    border-radius: 2px;
+    height: 16px;
+    width: 32px;
+    margin-left: 42px;
+    font-size: 10px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+.api span {
+    margin: auto;
+}
+
+
+
+.wrapper {
+    display: flex;
+}
+.sidebar {
+    width: 184px;
+    margin-right: 56px;
+}
+.content {
+    width: 700px;
+}
+.content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.content p {
+    font-size: 15px;
+    color: #162945;
+    margin-top: 0px;
+}
