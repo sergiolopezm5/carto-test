@@ -6,8 +6,6 @@ Install [nodeJS](https://nodejs.org/en/)
 
 Open Terminal and go to the project directory
 
-Use `npm install` to install dependencies
-
 Run the app with `node app.js`
 
 Load http://localhost:3000/ in a browser to see the test
