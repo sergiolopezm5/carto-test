@@ -4,7 +4,7 @@ Install [nodeJS](https://nodejs.org/en/)
 
 [Download](https://github.com/sergiolopezm5/carto-test) and unzip the project
 
-Open Terminal and go to the folder directory
+Open Terminal and go to the project directory
 
 Use `npm install` to install dependencies
 
