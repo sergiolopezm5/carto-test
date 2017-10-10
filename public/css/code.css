@@ -1,3 +1,4 @@
+/* Code Block style */
 .code_block {
     font-family: 'PT Mono', monospace;
     background-color: #162945;
@@ -5,9 +6,10 @@
     box-shadow: 0px 1px 2px #dddddd;
     padding: 16px;
     overflow : auto;
-    line-height: 24px;
+    line-height: 22px;
     margin-bottom: 24px;
     margin-top: 24px;
+    font-weight: bold;
 }
 
 .code_content {

@@ -5,9 +5,9 @@
     <title>Docs - topic</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/code.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,37 +15,126 @@
         <div class="container">
             <nav class="menu">
                 <ul class="nav-left">
-                    <li>
+                    <li class="logo">
                         <img src="img/logo.svg">
-                        <span>ACME.CORP</span>
+                        <span><span class="logo-bold">ACME</span> CORP.</span>
                     </li>
-                    <li>Builder</li>
-                    <li>Engine</li>
-                    <li>Solutions</li>
-                    <li>Pricing</li>
-                    <li>Blog</li>
+                    <li class="no-mobile">Builder</li>
+                    <li class="no-mobile">Engine</li>
+                    <li class="no-mobile">Solutions<span class="arrow"><img src="img/arrow.svg"></span></li>
+                    <li class="no-mobile">Pricing</li>
+                    <li class="no-mobile">Blog</li>
                 </ul>
                 <ul class="nav-right">
                     <li>Login</li>
                     <li>Contact us</li>
                 </ul>
+                <ul id="hidden-menu" class="no-mobile">
+                    <li>Builder</li>
+                    <li>Engine</li>
+                    <li>Solutions<span class="arrow"><img src="img/arrow.svg"></span></li>
+                    <li>Pricing</li>
+                    <li>Blog</li>
+                </ul>
+                <ul id="hamburguer" class="mobile">
+                    <li><img src="img/hamburguer.svg"></li>
+                </ul>
             </nav>
         </div>
     </header>
-    <section class="first-section">
+    <div class="first-section">
         <div class="container wrapper">
             <div class="sidebar">
-                <p>Home</p>
+                <ul>
+                    <li class="title">Home</li>
+                    <li class="title">Client libraries</li>
+                    <li class="inside image"><img src="img/logo_sidebar.svg">CARTO.js</li>
+                    <li class="inside selected">Getting Started</li>
+                    <li class="inside">General Concepts</li>
+                    <li class="inside">Named Maps</li>
+                    <li class="inside">Specific UI Functions</li>
+                    <li class="inside">Events</li>
+                    <li class="inside">API Reference</li>
+                    <li class="title">Location Data Services</li>
+                    <li class="inside image n-s"><img src="img/routing_sidebar.svg">Routing</li>
+                    <li class="title">Builder</li>
+                    <li class="inside image"><img src="img/static_sidebar.svg">Static</li>
+                    <li class="inside image"><img src="img/tiles_sidebar.svg">Tiles</li>
+                    <li class="inside image"><img src="img/globe_sidebar.svg">WMS</li>
+                </ul>
             </div>
             <div class="content">
-                <h1>Getting started</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu egestas diam.</p>
-                <pre class="code_block"><code class="code_content"><span class="code_line">1  </span><span class="code_tag">&lt;link rel=</span><span class="code_string">"stylesheet"</span><span class="code_tag"> href=</span><span class="code_string">"http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css"</span><span class="code_tag">/></span><br><span class="code_line">2  </span><span class="code_tag">...</span><br><span class="code_line">3  </span><span class="code_tag">&lt;div id=</span><span class="code_string">"map"</span><span class="code_tag">>&lt;/div></span><br><span class="code_line">4  </span><span class="code_tag">...</span><br><span class="code_line">5  </span><span class="code_tag">&lt;script src=</span><span class="code_string">"http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"</span><span class="code_tag">>&lt;/script></span><br><span class="code_line">6  </span><span class="code_tag">&lt;script></span><br><span class="code_line">7  </span><span class="code_comment">// get the viz.json url from the CARTO Editor</span><br><span class="code_line">8  </span><span class="code_comment">// - click on visualize</span><br><span class="code_line">9  </span><span class="code_comment">// - create new visualization</span><br><span class="code_line">10 </span><span class="code_comment">// - make visualization public</span><br><span class="code_line">11 </span><span class="code_comment">// - click on publish</span><br><span class="code_line">12 </span><span class="code_comment">// - go to API tab</span><br><span class="code_line">13 </span><br><span class="code_line">14 </span><span class="code_object">window.</span><span class="code_property">onload =</span><span class="code_function"> function</span><span class="code_tag">() {</span><br><span class="code_line">15 </span><span class="code_variable">  cartodb.</span><span class="code_property">createVis</span><span class="code_tag">(</span><span class="code_string">'map'</span>, <span class="code_string">'http://documentation.carto.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json'</span><span class="code_tag">);</span><br><span class="code_line">16 </span><span class="code_tag">}</span><br><span class="code_line">17 </span><span class="code_tag">&lt;/script></span></code></pre>
-                <a>Grab the complete example source code</a>
+                <section>
+                    <h1>Getting started</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu egestas diam.</p>
+                    <pre class="code_block"><code class="code_content"><span class="code_line">1  </span><span class="code_tag">&lt;link rel=</span><span class="code_string">"stylesheet"</span><span class="code_tag"> href=</span><span class="code_string">"http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css"</span><span class="code_tag">/></span><br><span class="code_line">2  </span><span class="code_tag">...</span><br><span class="code_line">3  </span><span class="code_tag">&lt;div id=</span><span class="code_string">"map"</span><span class="code_tag">>&lt;/div></span><br><span class="code_line">4  </span><span class="code_tag">...</span><br><span class="code_line">5  </span><span class="code_tag">&lt;script src=</span><span class="code_string">"http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"</span><span class="code_tag">>&lt;/script></span><br><span class="code_line">6  </span><span class="code_tag">&lt;script></span><br><span class="code_line">7  </span><span class="code_comment">// get the viz.json url from the CARTO Editor</span><br><span class="code_line">8  </span><span class="code_comment">// - click on visualize</span><br><span class="code_line">9  </span><span class="code_comment">// - create new visualization</span><br><span class="code_line">10 </span><span class="code_comment">// - make visualization public</span><br><span class="code_line">11 </span><span class="code_comment">// - click on publish</span><br><span class="code_line">12 </span><span class="code_comment">// - go to API tab</span><br><span class="code_line">13 </span><br><span class="code_line">14 </span><span class="code_object">window.</span><span class="code_property">onload =</span><span class="code_function"> function</span><span class="code_tag">() {</span><br><span class="code_line">15 </span><span class="code_variable">  cartodb.</span><span class="code_property">createVis</span><span class="code_tag">(</span><span class="code_string">'map'</span>, <span class="code_string">'http://documentation.carto.com/api/v2/viz/2b13c956-e7c1-11e2-806b-5404a6a683d5/viz.json'</span><span class="code_tag">);</span><br><span class="code_line">16 </span><span class="code_tag">}</span><br><span class="code_line">17 </span><span class="code_tag">&lt;/script></span></code></pre>
+                    <a>Grab the complete example source code</a>
+                </section>
+                <section class="sub-section">
+                    <h2>Using the CARTO.js LibraryPermalink</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p><p> Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. </p>
+                    <table>
+                        <tr>
+                            <th>Lorem</th>
+                            <th>ipsum</th>
+                        </tr>
+                        <tr>
+                            <td class="js-code">dolor</td>
+                            <td>sit amet</td>
+                        </tr>
+                        <tr>
+                            <td class="js-code">consectetuer</td>
+                            <td>adipiscing elit</td>
+                        </tr>
+                        <tr>
+                            <td class="js-code">Aenean</td>
+                            <td>commodo ligula</td>
+                        </tr>
+                    </table>
+                    <h3>Other Mapping Libraries</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    <div class="info">
+                        <span><img src="img/info.svg"></span>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h2>Creating a Visualization from ScratchPermalik</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                </section>
+                <section class="sub-section">
+                    <h2>Next steps</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                    <div class="big-card">
+                        <span><img src="img/device.svg"></span>
+                        <div class="card-content">
+                            <h4 class="card-title">Lorem ipsum dolor</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="sub-section">
+                    <h2>Questions?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo <a>ligula eget dolor.</a></p>
+                </section>
             </div>
         </div>
         
-    </section>
+    </div>
+    <footer>
+    </footer>
+    <script>
+        $('#hamburguer').on('click',function() {
+            $('#hidden-menu').removeClass('no-mobile');
+            $('#hidden-menu').addClass('mobile-menu-active');
+        });
+        $('#hidden-menu').on('click',function() {
+            $('#hidden-menu').addClass('no-mobile');
+            $('#hidden-menu').removeClass('mobile-menu-active');
+        });
+        
+    </script>
 </body>
 
 </html>

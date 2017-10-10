@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <title>Docs index</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Open+Sans:300,400,600,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="gray">
     <header>
         <div class="container">
             <nav class="menu">
                 <ul class="nav-left">
-                    <li>
+                    <li class="logo">
                         <img src="img/logo.svg">
-                        <span>ACME.CORP</span>
+                        <span><span class="logo-bold">ACME</span> CORP.</span>
                     </li>
-                    <li>Builder</li>
-                    <li>Engine</li>
-                    <li>Solutions<span>></span></li>
-                    <li>Pricing</li>
-                    <li>Blog</li>
+                    <li class="no-mobile">Builder</li>
+                    <li class="no-mobile">Engine</li>
+                    <li class="no-mobile">Solutions<span class="arrow"><img src="img/arrow.svg"></span></li>
+                    <li class="no-mobile">Pricing</li>
+                    <li class="no-mobile">Blog</li>
                 </ul>
                 <ul class="nav-right">
                     <li>Login</li>
                     <li>Contact us</li>
+                </ul>
+                <ul id="hidden-menu" class="no-mobile">
+                    <li>Builder</li>
+                    <li>Engine</li>
+                    <li>Solutions<span class="arrow"><img src="img/arrow.svg"></span></li>
+                    <li>Pricing</li>
+                    <li>Blog</li>
+                </ul>
+                <ul id="hamburguer" class="mobile">
+                    <li><img src="img/hamburguer.svg"></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +43,7 @@
     <nav class="docs">
         <div class="container">
             <ul>
-                <li>Documentation</li>
+                <li class="selected">Documentation</li>
                 <li>Guides</li>
                 <li>Tutorials</li>
                 <li>Support</li>
@@ -48,6 +58,7 @@
                 <div>
                     <form>
                         <input type="text" placeholder="Search the docs">
+                        <span class="search-icon"><img src="img/search.svg"></span>
                     </form>
                 </div>
             </div<
@@ -59,7 +70,7 @@
                 <li>
                     <div class="card">
                         <h2>Engine</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris id lectus pellentesque lobortis sed sed justo. Nunc euismod malesuada dolor, vel dictum. </p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris id lectus pellentesque lobortis sed sed justo. Nunc euismod malesuada dolor, vel.</p>
                         <a>
                             <div class="box">
                                 <img src="img/carto64.svg">
@@ -71,7 +82,7 @@
                 <li>
                     <div class="card">
                         <h2>Location Data Services</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris id lectus pellentesque lobortis sed sed justo. Nunc euismod malesuada dolor, vel dictum. </p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris id lectus pellentesque lobortis sed sed justo. Nunc euismod malesuada dolor, vel.</p>
                         <a href="/topic">
                             <div class="box">
                                 <img src="img/cartodata.svg">
@@ -86,7 +97,7 @@
                 <li>
                     <div class="card">
                         <h2>Builder</h2>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris id lectus pellentesque lobortis sed sed justo. Nunc euismod malesuada dolor, vel dictum. </p>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae mauris id lectus pellentesque lobortis sed sed justo. Nunc euismod malesuada dolor, vel.</p>
                         <a>
                             <div class="box">
                                 <img src="img/cartostatic.svg">
@@ -101,6 +112,17 @@
             </ul>
         </div>
     </section>
+    <script>
+        $('#hamburguer').on('click',function() {
+            $('#hidden-menu').removeClass('no-mobile');
+            $('#hidden-menu').addClass('mobile-menu-active');
+        });
+        $('#hidden-menu').on('click',function() {
+            $('#hidden-menu').addClass('no-mobile');
+            $('#hidden-menu').removeClass('mobile-menu-active');
+        });
+
+    </script>
 </body>
 
 </html>
