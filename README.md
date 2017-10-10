@@ -1,13 +1,13 @@
-# carto-test
+# Carto test
 
-Install nodeJS https://nodejs.org/en/
+Install [nodeJS](https://nodejs.org/en/)
 
-Download and unzip the test 
+[Download](https://github.com/sergiolopezm5/carto-test) and unzip the project
 
 Open Terminal and go to the folder directory
 
-Ejecute npm install to install dependecies
+Use `npm install` to install dependencies
 
-Ejecute node app.js
+Run the app with `node app.js`
 
-Open the url localhost:3000
+Load http://localhost:3000/ in a browser to see the test
